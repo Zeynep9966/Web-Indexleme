@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block string %}
+		
+	<center>
+
+		<p style="text-align:center;">
+            Analizi Yapılacak Web Adreslerini Giriniz:<br>
+		</p>
+		{%from "includes/_formhelpers.html" import render_field %}
+			<form method="POST" action="http://127.0.0.1:5000/asama23">
+			
+			<pre style="text-align: center;">
+			URL1:
+			<input  type="url" name="URL1" style="width: 500px; height: 20px;" required> </pre>
+			<pre style="text-align: center;">
+			URL2:
+			<input  type="url" name="URL2" style="width: 500px; height: 20px;" required> </pre>
+			<pre style="text-align: center;">
+			<input type="submit" value="BAŞLA" align="center">  <input type="reset" value="SIFIRLA" align="center"> </pre>
+
+			</form>
+			
+	</center>	
+
+
+{% endblock string %}
